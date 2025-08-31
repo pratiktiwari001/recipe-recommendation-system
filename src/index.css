@@ -1,0 +1,88 @@
+/* Custom background gradient for the body/container */
+.custom-bg-gradient {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Custom card styling with a hover effect */
+.custom-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Link styling to remove default underlines */
+.custom-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block; /* Make the link fill the card area */
+}
+
+/* Color variations for each card */
+.custom-card-primary .card-body i, .custom-card-primary .card-body span {
+  color: #007bff; /* Primary color */
+}
+
+.custom-card-success .card-body i, .custom-card-success .card-body span {
+  color: #28a745; /* Success color */
+}
+
+.custom-card-warning .card-body i, .custom-card-warning .card-body span {
+  color: #ffc107; /* Warning color */
+}
+
+.custom-card-danger .card-body i, .custom-card-danger .card-body span {
+  color: #dc3545; /* Danger color */
+}
+
+.custom-card-info .card-body i, .custom-card-info .card-body span {
+  color: #17a2b8; /* Bootstrap's info color */
+}
+
+/* Style for the dark card as requested */
+.custom-card-dark .card-body i, .custom-card-dark .card-body span {
+  color: #343a40; /* Bootstrap's dark color */
+}
+
+/* Recipe Hero Image */
+.recipe-hero-image-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recipe-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+
+.recipe-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+/* Add a subtle shadow to text for readability */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Video hover effect */
+.video-hover-effect {
+  transition: transform 0.3s ease-in-out;
+}
+
+.video-hover-effect:hover {
+  transform: scale(1.02);
+}

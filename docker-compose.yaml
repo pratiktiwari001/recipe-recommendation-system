@@ -1,0 +1,19 @@
+services:
+  recipicks:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: recipicks
+    ports:
+      - "5173:5173"
+    volumes:
+      - new_volume:/app/src/
+    networks:
+      - new-net
+
+volumes:
+  new_volume:
+
+networks:
+  new-net:
+    driver: bridge

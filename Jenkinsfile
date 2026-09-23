@@ -35,4 +35,26 @@ pipeline{
            } 
         }
     }
+post{
+    success{
+        script{
+            emailext(
+                from: "tiwaripratik2005@gmail.com",
+                to: "tiwaripratik2005@gmail.com",
+                subject: "Build Success",
+                body: "Your build on Jenkins was Success !!!" 
+            )
+        }
+    }
+    failure{
+        script{
+            emailext(
+                from: "tiwaripratik2005@gmail.com",
+                to: "tiwaripratik2005@gmail.com",
+                subject: "Build Failure",
+                body: "Your build on Jenkins was Failure !!!" 
+            )
+        }
+    }
+}
 }

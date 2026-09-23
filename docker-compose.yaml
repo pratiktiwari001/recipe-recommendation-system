@@ -1,8 +1,6 @@
 services:
   recipicks:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: pratiktiwari001/recipicks-app:latest
     container_name: recipicks
     ports:
       - "5173:5173"

@@ -1,0 +1,19 @@
+kind: Ingress
+apiVersion: networking.k8s.io/v1
+
+metadata:
+  name: recipicks-ingress
+  namespace: recipicks-ns
+
+spec:
+  ingressClassName: nginx
+  rules:
+  - http:
+      paths:
+      - path: /recipe
+        pathType: Prefix
+        backend:
+          service:
+            name: recipicks-svc
+            port:
+              number: 5173

@@ -1,0 +1,18 @@
+kind: Service
+apiVersion: v1
+
+metadata:
+  name: recipicks-svc
+  namespace: recipicks-ns
+  labels:
+    app: recipicks
+
+spec:
+  selector:
+    app: recipicks
+
+  ports:
+  - protocol: TCP
+    port: 5173
+    targetPort: 5173
+

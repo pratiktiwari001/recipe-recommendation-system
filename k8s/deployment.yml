@@ -1,0 +1,27 @@
+kind: Deployment
+apiVersion: apps/v1
+
+metadata:
+  name: recipicks-deployment
+  namespace: recipicks-ns
+  labels:
+    app: recipicks
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: recipicks
+  template:
+    metadata:
+      namespace: recipicks-ns
+      labels:
+        app: recipicks
+    spec:
+      containers:
+      - name: recipicks-pod
+        image: pratiktiwari001/recipicks-app:latest
+        ports:
+        - containerPort: 5173
+
+
